@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AK Creations — professional photography, videography, wedding photography, album design, photo editing, printing and customized frames.">
+  <meta name="theme-color" content="#090909">
+  <title>AK Creations | Professional Photography & Videography</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--gold:#ff9800;--gold2:#ffc15a;--ink:#090909;--paper:#f7f4ef;--muted:#b8b3aa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:#fff;font-family:"DM Sans",sans-serif}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}
+    .topline{height:4px;background:linear-gradient(90deg,#ff7900,#ffd27b,#ff7900)}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid #ffffff16}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand img{width:245px;height:76px;object-fit:contain;display:block}
+    .links{display:flex;align-items:center;gap:27px;color:#e8e3da;font-size:14px}.links a:hover{color:var(--gold)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:999px;background:var(--gold);color:#17100a;font-weight:700;font-size:14px;transition:.2s}
+    .btn:hover{background:#ffc15a;transform:translateY(-2px)}.btn.outline{background:transparent;color:#fff;border:1px solid #ffffff55}.btn.outline:hover{border-color:var(--gold);color:var(--gold)}
+    .hero{min-height:660px;display:grid;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,#080808 0%,rgba(8,8,8,.95) 38%,rgba(8,8,8,.52) 100%),url("assets/studio-behind-the-scenes.webp") center 42%/cover}
+    .hero:after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:70px;background:#ff980012;filter:blur(15px)}
+    .hero-content{position:relative;z-index:1;padding:76px 0;max-width:820px}.hero-logo{display:block;width:min(620px,100%);height:auto;max-height:190px;object-fit:contain;object-position:left center;margin:0 0 18px;filter:drop-shadow(0 8px 18px #000)}
+    .eyebrow{color:var(--gold2);letter-spacing:3px;text-transform:uppercase;font-size:12px;font-weight:700}
+    h1,h2,h3{font-family:"Playfair Display",serif}h1{font-size:clamp(44px,7vw,82px);line-height:1.02;margin:18px 0}
+    h1 span{color:var(--gold)}.hero p{font-size:18px;line-height:1.8;color:#e1ddd6;max-width:600px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}.hero-note{margin-top:36px;color:#c8c0b5;font-size:13px;letter-spacing:.4px}
+    section{padding:92px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 46px}.section-head h2{font-size:clamp(34px,5vw,48px);margin:12px 0}.section-head p{color:var(--muted);line-height:1.7}
+    .services{background:var(--paper);color:#171411}.services .section-head p{color:#716b63}
+    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service-card{background:#fff;border:1px solid #e9e3da;border-radius:16px;overflow:hidden;box-shadow:0 8px 24px #21180c0b;transition:.25s}
+    .service-card:hover{transform:translateY(-5px);box-shadow:0 15px 34px #21180c18}
+    .service-visual{height:175px;display:flex;align-items:center;justify-content:center;background:#17110a;color:#3b2510;font-size:52px;overflow:hidden}.service-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s}.service-card:hover .service-visual img{transform:scale(1.06)}
+    .service-card h3{font-size:21px;margin:19px 20px 8px}.service-card p{font-size:13px;line-height:1.65;color:#777067;margin:0 20px 22px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-photo{position:relative}.about-photo img{width:100%;height:440px;object-fit:cover;border-radius:18px;filter:saturate(.82)}
+    .about-photo:before{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold);border-radius:18px;z-index:-1}
+    .about-copy h2{font-size:clamp(34px,5vw,48px);margin:12px 0}.about-copy p{color:#c7c0b6;line-height:1.85}
+    .ticks{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:26px 0}.ticks div{font-size:14px;color:#eee}.ticks b{color:var(--gold);margin-right:8px}
+    .promise{background:linear-gradient(110deg,#17110a,#21170c 55%,#0c0b09);text-align:center;border-top:1px solid #ff980033;border-bottom:1px solid #ff980033}
+    .promise h2{font-size:clamp(32px,5vw,48px);margin:10px}.promise p{color:#d5c9b8;letter-spacing:1px}
+    .contact{background:var(--paper);color:#171411}.contact .section-head p{color:#716b63}
+    .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .contact-card{background:#fff;padding:28px;border-radius:16px;border:1px solid #e9e3da}
+    .contact-card .symbol{font-size:28px;color:#e88600}.contact-card h3{font-size:21px;margin:12px 0 6px}.contact-card p{font-size:14px;color:#6e675e;line-height:1.7;overflow-wrap:anywhere}
+    .contact-card a{color:#a85e00;font-weight:700}.delivery{margin-top:24px;padding:22px;border-radius:14px;background:#fff0d9;text-align:center;color:#5d3b12;font-weight:600}
+    footer{padding:28px 0;background:#050505;color:#a8a198;font-size:13px}.footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.footer-brand{color:var(--gold);font-weight:700;letter-spacing:1px}
+    @media(max-width:850px){.links{gap:14px}.links a:not(.btn){display:none}.service-grid{grid-template-columns:repeat(2,1fr)}.about-grid{gap:35px}}
+    @media(max-width:620px){.nav{height:70px}.brand img{width:180px;height:60px}.nav>.btn{padding:10px 14px;font-size:12px}.hero{min-height:610px;background-position:58% center}.hero-content{padding:75px 0}.hero p{font-size:16px}section{padding:70px 0}.service-grid,.contact-grid,.about-grid{grid-template-columns:1fr}.service-visual{height:145px}.about-photo img{height:330px}.about-photo{margin:0 12px 14px 0}.ticks{grid-template-columns:1fr 1fr}.footer-row{justify-content:center;text-align:center}}
+  </style>
+</head>
+<body>
+<div class="topline"></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="AK Creations home"><img src="assets/ak-creations-logo.png" alt="AK Creations logo"></a>
+    <nav class="links" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Our Services</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="https://wa.me/917092138428?text=Hello%20AK%20Creations%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">WhatsApp Enquiry ↗</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap"><div class="hero-content">
+      <img class="hero-logo" src="assets/ak-creations-logo.png" alt="AK Creations — official logo">
+      <div class="eyebrow">Professional Photo & Videography Services</div>
+      <h1>Every Moment.<br><span>A Beautiful Memory.</span></h1>
+      <p><strong>Professional Photo & Videography Services</strong><br>We capture your beautiful moments and turn them into memories forever!</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/917092138428?text=Hello%20AK%20Creations%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">📸 Enquire on WhatsApp</a>
+        <a class="btn outline" href="#services">Explore Our Services</a>
+      </div>
+      <div class="hero-note">QUALITY&nbsp; • &nbsp;CREATIVITY&nbsp; • &nbsp;CUSTOMER SATISFACTION</div>
+    </div></div>
+  </section>
+
+  <section class="services" id="services">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">What We Do</div><h2>Our Creative Services</h2><p>From once-in-a-lifetime celebrations to the little details worth keeping, we give every frame a professional touch.</p></div>
+      <div class="service-grid">
+        <article class="service-card"><div class="service-visual"><img src="assets/service-photography.jpg" alt="photography"></div><h3>Photography & Videography</h3><p>Professional photography and videography to capture your beautiful moments and turn them into memories forever.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-wedding.jpg" alt="wedding"></div><h3>Wedding & Event Photography</h3><p>Thoughtful coverage of weddings, family celebrations and memorable events.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-candid.jpg" alt="candid"></div><h3>Candid Photography & Videography</h3><p>Natural expressions, joyful reactions and genuine moments captured as they happen.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-album-design.jpg" alt="album design"></div><h3>Album Designing</h3><p>Beautifully arranged photo albums that tell your story from beginning to end.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-video-editing.jpg" alt="video editing"></div><h3>Video Editing & Mixing</h3><p>Polished edits, music and smooth storytelling for your treasured footage.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-photo-editing.jpg" alt="photo editing"></div><h3>Photo Editing & Retouching</h3><p>All types of photo editing work with a careful, professional finish.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-colour-grading.jpg" alt="colour grading"></div><h3>Professional Colour Grading</h3><p>Balanced tones and cinematic colour to bring your photos and videos to life.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-album-printing.jpg" alt="album printing"></div><h3>High-Quality Album Printing</h3><p>Premium-quality album printing to preserve your favourite photographs.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-photo-frames.jpg" alt="photo frames"></div><h3>All Types of Photo Frames</h3><p>Choose from a variety of photo frame styles and sizes for your home or office.</p></article>
+        <article class="service-card"><div class="service-visual"><img src="assets/service-custom-frames.jpg" alt="customized albums and photo frames"></div><h3>Customized Albums & Photo Frames</h3><p>Personalized albums and frames made to celebrate your favourite memories. Photo frame home delivery available.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-photo"><img src="assets/studio-behind-the-scenes.webp" alt="AK Creations photography and editing workspace"></div>
+      <div class="about-copy"><div class="eyebrow">The AK Creations Touch</div><h2>Your Memories Deserve the Best.</h2>
+        <p>At AK Creations, we believe every photograph holds a story. We combine creativity, attention to detail and professional editing to help you keep those stories close for years to come.</p>
+        <div class="ticks"><div><b>✓</b> Creative approach</div><div><b>✓</b> Detail-focused work</div><div><b>✓</b> Quality finishing</div><div><b>✓</b> Customer care</div></div>
+        <a class="btn" href="https://wa.me/917092138428?text=Hello%20AK%20Creations%2C%20please%20share%20your%20service%20details." target="_blank" rel="noopener">Talk to Our Team ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="promise"><div class="wrap"><div class="eyebrow">Our Promise</div><h2>Making Your Memories Beautiful</h2><p>WITH A PROFESSIONAL TOUCH!</p></div></section>
+
+  <section class="contact" id="contact">
+    <div class="wrap"><div class="section-head"><div class="eyebrow">Let's Connect</div><h2>Get in Touch with AK Creations</h2><p>Have a wedding, event, album or frame project in mind? Contact us and let's make it memorable.</p></div>
+      <div class="contact-grid">
+        <div class="contact-card"><div class="symbol">☏</div><h3>WhatsApp / Call</h3><p>For bookings and enquiries</p><a href="https://wa.me/917092138428" target="_blank" rel="noopener">+91 70921 38428 ↗</a></div>
+        <div class="contact-card"><div class="symbol">✉</div><h3>Email Us</h3><p>Send your questions and requirements</p><a href="mailto:akcreations.sn@gmail.com">akcreations.sn@gmail.com</a></div>
+        <div class="contact-card"><div class="symbol">⌖</div><h3>Find Our Location</h3><p>Open the location in Google Maps</p><a href="https://maps.app.goo.gl/f8LRTFeunRjvBRE4A" target="_blank" rel="noopener">Get Directions ↗</a></div>
+      </div>
+      <div class="delivery">🚚 Photo frames home delivery available!</div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><div class="footer-brand">AK CREATIONS</div><div>Quality • Creativity • Customer Satisfaction</div><div>© <span id="year"></span> AK Creations. All rights reserved.</div></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
